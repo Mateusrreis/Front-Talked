@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-12">
+    <div class="ImagemCentralInicial">
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <br />
+        <div class="card" id="CardLogin">
+          <div class="card-body">
+            <form>
+              <h4 class="titlePerfil fontText">Entre para acessar o seu perfil:</h4>
+              <div class="form-group">
+                <input type="text" class="form-control corInput fontText" id="Usuario" name="usuario" placeholder="Digite seu Email" [(ngModel)]="usuario.Email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control corInput fontText" id="Senha" name="senha" placeholder="Digite sua Senha" [(ngModel)]="usuario.Senha">
+                <a href="/cadastrologin" class="btn btn-secundary textoCorrentSenha fontText">Esqueceu sua senha?</a>
+              </div>
+              <button type="button" class="btn btn-primary botaoEntrar" (click)="Logar(usuario)">Entrar</button>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="Lembrar" name="check" [(ngModel)]="usuario.Lembrar">
+                <label class="form-check-label" for="Lembrar">Lembrar de mim:</label>
+              </div>
+              <a href="/cadastrologin" class="btn btn-secundary  textoCorrentCadastro fontText" (click)="Cancelar()">Deseja fazer o cadastro?</a>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,27 @@
+@media screen and (max-width: 750px) {
+
+  #CardCadastro {
+    right: 100%;
+    top:21%;
+    min-width: 260px;
+    margin-left:-3%;
+  }
+
+  .botaoEnviar {
+    background-color: #7d00ad;
+    padding: 0.4rem 2rem;
+    border-color: #7d00ad;
+    position: relative;
+    left: 2px;
+    top: 5px;
+  }
+
+  .textoCorrentCadastro {
+    color: #7d00ad;
+    font-size: 10px;
+    position: relative;
+    left: 8px;
+    top: 5px;
+  }
+
+}

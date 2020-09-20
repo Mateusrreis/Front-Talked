@@ -1,0 +1,50 @@
+@media screen and (max-width: 750px) {
+  #CardLogin {
+    width:250px;
+    position: relative;
+    top: 55px;
+    right:8%;
+    -webkit-box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
+    -moz-box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
+    box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
+  }
+
+  .botaoEntrar {
+    background-color: #7d00ad;
+    padding: 0.4rem 5.1rem;
+    border-color: #7d00ad;
+    position: relative;
+    left: 2px;
+    top: -7px;
+  }
+
+    .botaoEntrar:active {
+      box-shadow: 0 0 10px #7d00ad;
+      background-color: #7d00ad;
+      padding: 0.4rem 5.1rem;
+      position: relative;
+      left: 2px;
+      top: -7px;
+    }
+
+  .botaoEntrar:focus {
+    box-shadow: 0 0 10px #7d00ad;
+    background-color: #7d00ad;
+    padding: 0.4rem 5.1rem;
+    position: relative;
+    left: 2px;
+    top: -7px;
+  }
+
+  .textoCorrentSenha {
+    color: #7d00ad;
+    font-size: 13.5px;
+    position: relative;
+    left: 64px;
+  }
+
+  .titlePerfil {
+    margin: 30px 7px;
+    font-size: 17.1px;
+  }
+}

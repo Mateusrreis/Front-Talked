@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark corMenuBorderColor">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav">
+      <li (click)="OpenMenu()"><i class="fas fa-bars colorhamburger"></i></li>
+      <li class=""><div class="imagemLogo"></div></li> 
+    </ul>
+    <div *ngIf="Authenticated === true; else logarUsuario">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Olá {{User}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">Configurações</button>
+          <button class="dropdown-item" type="button" (click)="Sair()">Sair</button>
+        </div>
+      </div>
+      <ng-template #logarUsuario><a class="btn btn-primary" href="/login">Login</a></ng-template>
+    </div>
+    </div>
+</nav>
+
