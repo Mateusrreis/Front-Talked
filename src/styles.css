@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+@font-face {
+  font-family: josefinsans;
+  src: local(josefinsans) url('/Style/fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
+}
+
+.ImagemCentralInicial {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: url(app/Style/Images/LoginCad.png) no-repeat;
+  background-position: 30% 45%;
+  background-size: cover;
+}

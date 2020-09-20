@@ -1,0 +1,22 @@
+.corMenuBorderColor {
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 4px 15px 2px rgba(125,0,173,0.19);
+  box-shadow: 1px 4px 15px 2px rgba(125,0,173,0.19);
+  padding-bottom:29px;
+}
+
+.colorhamburger {
+  color: #7d00ad;
+  cursor: pointer;
+  position:relative;
+  top:10px;
+}
+
+.imagemLogo {
+  background: url(../Style/Images/simbolo.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding:25px;
+  position: fixed;
+  left: 46%;
+}
