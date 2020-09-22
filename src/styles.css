@@ -34,3 +34,17 @@ code {
   background-position: 30% 45%;
   background-size: cover;
 }
+
+.inputCustom{
+  -webkit-box-shadow: -0.5px 0px 14px -5px #0c0b0c;
+  -moz-box-shadow: -0.5px 0px 14px -5px #0c0b0c;
+  box-shadow: -0.5px 0px 14px -5px #0c0b0c;
+  color: #7d00ad;
+}
+
+.inputCustom:focus{
+  -webkit-box-shadow: -4px 0px 19px -1px #7d00ad;
+  -moz-box-shadow: -4px 0px 19px -1px #7d00ad;
+  box-shadow: -4px 0px 19px -1px #7d00ad;
+  color: #7d00ad;
+}

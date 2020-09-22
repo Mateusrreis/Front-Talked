@@ -5,5 +5,38 @@
 .personJubotron{
     margin-right:0px;
     margin-left:0px;
-    padding-bottom:7.5%;
+    padding-bottom:17.5%;
+    background-image: url("../Style/Images/capaHome.png");
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
+
+.personTitle{
+ color: #7d00ad;
+ font-weight: 400;
+}
+
+.positionTitle{
+    position: relative;
+    top: 89%;
+    left: 22%;
+    margin-bottom: 3%;
+}
+
+.positionInputHome{
+    position: relative;
+    top: 92%;
+    left: 7%;
+}
+
+.positionVerso{
+    position: relative;
+    top: 109%;
+    left: 43%;
+}
+
+.personbuttonSearch:hover{
+    background-color: #7d00ad;
+    border-color: #7d00ad;
+}
+
