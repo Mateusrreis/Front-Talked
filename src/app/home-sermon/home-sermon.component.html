@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-4"></div>
     <div class="col-4">
-      <h1 class="display-4 positionTitle personTitle">Hello, world!</h1>
+      <h3 class="display-4 positionTitle personTitle">Olá, {{User.unique_name}}</h3>
       <div class="input-group mb-3 positionInputHome">
         <input type="text" class="form-control inputCustom font-weight-normal" placeholder="Experimente pesquisar por: amor, alegria, salvação."  aria-describedby="button-addon1">
         <div class="input-group-prepend">
@@ -11,9 +11,8 @@
         </div>
       </div>
       <div class="positionVerso">
-      <h5 class="personTitle">
-        "Versiculo"
-      </h5>
+      <app-versiculocomponent>
+      </app-versiculocomponent>
     </div>
     </div>
     <div class="col-4"></div>
@@ -23,34 +22,31 @@
 <!-- opcoes do sistema --> 
 <div class="row">
   <div class="col-4 d-flex justify-content-center">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card TamanhoCard cardCustom">
+      <img class="card-img-top"  src="assets/Style/Images/engineer.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">Criar Pregação</p>
         <div class="col text-center">
-        <button class="btn btn-primary">Pregação</button>
+        <button class="btn btn-primary botao">Criar Pregação</button>
         </div>
       </div>
     </div>
   </div>
   <div class="col-4 d-flex justify-content-center">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card TamanhoCard cardCustom">
+      <img class="card-img-top"  src="assets/Style/Images/search.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">Descobrir Mensagens</p>
         <div class="col text-center">
-        <button class="btn btn-primary">Mensagens</button>
+        <button class="btn btn-primary botao">Descobrir Mensagens</button>
       </div>
       </div>
     </div>
   </div>
   <div class="col-4 d-flex justify-content-center">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card TamanhoCard cardCustom">
+      <img class="card-img-top"  src="assets/Style/Images/Thinks.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">Configuração da conta</p>
         <div class="col text-center">
-        <button class="btn btn-primary">Configuraçoes</button>
+        <button class="btn btn-primary botao">Configuração da conta</button>
       </div>
       </div>
     </div>

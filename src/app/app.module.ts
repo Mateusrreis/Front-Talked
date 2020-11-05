@@ -6,8 +6,12 @@ import { LoginModule } from './login/login.module';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuModule } from './menu/menu.module';
+import { JwtModule } from '@auth0/angular-jwt';
 
 
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 @NgModule({
   declarations: [
@@ -19,7 +23,13 @@ import { MenuModule } from './menu/menu.module';
     LoginModule,
     MenuModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    JwtModule.forRoot({
+      config:{
+        tokenGetter : tokenGetter,
+        allowedDomains: ["localhost:44301"]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

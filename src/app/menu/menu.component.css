@@ -9,7 +9,7 @@
   color: #7d00ad;
   cursor: pointer;
   position:relative;
-  top:18px;
+  top:1.5rem;
 }
 
 .imagemLogo {
@@ -17,21 +17,22 @@
   background-repeat:no-repeat;
   background-size:cover;
   padding:30px;
-  position: fixed;
-  left: 46%;
+  position: relative;
+  top:0.5rem;
+  left: 52rem;
 }
 
 .configUsuario{
   position: relative;
   left: 102rem;
-  top: 15px;
+  top: 1.5rem;
   border-radius: 60%;
   color: #7d00ad;
 }
 .configUsuario:active{
   position: relative;
   left: 102rem;
-  top: 15px;
+  top: 1.5rem;
   border-radius: 60%;
   color: #7d00ad;
   border-color: #7d00ad;
@@ -39,7 +40,7 @@
 .configUsuario:focus{
   position: relative;
   left: 102rem;
-  top: 15px;
+  top: 1.5rem;
   border-radius: 60%;
   color: #7d00ad;
   border-color: #7d00ad;
@@ -49,6 +50,6 @@
 .posicaomenu{
   position: absolute;
   left: 99rem;
-  top:56px;
+  top:60px;
 }
 

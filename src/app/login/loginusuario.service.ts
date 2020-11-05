@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { Usuario } from './cadastro-login/Usuario';
-import { tap, catchError } from 'rxjs/operators';
 import { Observable} from 'rxjs';
+import { tap, catchError, map, first } from 'rxjs/operators';
+import { Usuario } from './cadastro-login/Usuario';
+import { Config } from 'protractor';
 
 
 const httpOptions = {
@@ -10,8 +11,6 @@ const httpOptions = {
     'Content-Type': 'application/json',
     'Accept':'application/json'
   })
-
- 
 };
 
 @Injectable({
@@ -34,14 +33,11 @@ export class LoginusuarioService {
     return this.http.post('/Usuario/BuscarEmail', JSON.stringify(usuario), httpOptions);
   }
 
-  loginUsuario(usuario: Usuario): Observable<HttpResponse<any>> {
-    const response = this.http.post('/Usuario/LogarUsuario', usuario, {observe: 'response' })
-    return response.pipe(tap(resp => {
-      localStorage.setItem('token',resp.headers.get('X-Autentication'));
-    }));
+  loginUsuario(usuario: Usuario) : Observable<HttpResponse<Config>>{
+    return  this.http.post('https://localhost:44301/Usuario/LogarUsuario', usuario, {observe: 'response' });
   }
 
   logoutUsuario() {
-    return this.http.post('/Usuario/LogoutUsuario', httpOptions);
+    return this.http.post('https://localhost:44301/Usuario/LogoutUsuario', httpOptions);
   }
 }

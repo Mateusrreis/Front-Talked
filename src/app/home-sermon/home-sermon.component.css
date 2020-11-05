@@ -11,10 +11,7 @@
     background-size: cover;   
 }
 
-.personTitle{
- color: #7d00ad;
- font-weight: 400;
-}
+
 
 .positionTitle{
     position: relative;
@@ -35,7 +32,17 @@
     left: 43%;
 }
 
+.TamanhoCard{
+    width: 18rem;
+    height: 23rem;
+}
 
+.cardCustom:hover{
+    box-shadow: 0px -2px 15px 1px rgba(125,0,173,0.47);
+    -webkit-box-shadow: 0px -2px 15px 1px rgba(125,0,173,0.47);
+    -moz-box-shadow: 0px -2px 15px 1px rgba(125,0,173,0.47);
+    transition-duration: 1s;
+}
 
 
 

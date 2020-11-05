@@ -4,6 +4,7 @@ import { Menu } from './Menu';
 import { AuthTokenService } from '../core/auth-token.service';
 import { LoginusuarioService } from '../login/loginusuario.service';
 import { ToastrService } from 'ngx-toastr';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'app-menu',
@@ -14,19 +15,17 @@ export class MenuComponent implements OnInit {
 
   @Input() Menu: Menu[];
   Authenticated: boolean;
-  User: string;
   constructor(private serviceUser: AuthTokenService,
     private loginUsuario: LoginusuarioService,
     private rotas: Router,
-    private toaster: ToastrService) { }
+    private toaster: ToastrService
+    ) { }
 
   ngOnInit() {
     this.verificarToken();
   }
 
   verificarToken() {
-    let usuario = this.serviceUser.decodePayLoadJWT();
-    this.User = usuario.unique_name[1];
     this.Authenticated = true;
   }
 

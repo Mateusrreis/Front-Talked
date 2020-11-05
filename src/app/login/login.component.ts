@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { error } from 'protractor';
 import { ToastrService } from 'ngx-toastr';
 import { Menu } from '../menu/Menu';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -26,15 +28,19 @@ export class LoginComponent implements OnInit {
   }
 
   Logar(usuario) {
-
-    this.servico.loginUsuario(usuario).subscribe(result => {
-      if (result.status === 200) {
-        this.rotas.navigate(['/Home/Sermon']);
-      } 
-    },
-      error => this.toastr.error('Verifique se usuario e senha esta correto','Opa aconteceu algum erro!!', {
-        progressAnimation: 'increasing'
-      }))
+    this.servico.loginUsuario(usuario).pipe(first())
+    .subscribe(
+      (response) => {
+        if(response.ok)
+        {
+          localStorage.setItem('token',response.headers.get('x-autentication'));
+          this.rotas.navigate(['/Home/Sermon']);
+        }
+      },
+      error => this.toastr.error('Opa, usuario e senha incorretos')
+    ),
+    error => this.toastr.error('Opa, verifique seu usuario e senha');
+    
   }
 
   

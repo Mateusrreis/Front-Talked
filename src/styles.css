@@ -48,3 +48,20 @@ code {
   box-shadow: -4px 0px 19px -1px #7d00ad;
   color: #7d00ad;
 }
+
+.botao{
+  background-color: #7d00ad;
+  border-color: #7d00ad;
+}
+
+.botao:focus {
+  box-shadow: 0 0 10px #7d00ad;
+  background-color: #7d00ad;
+  border-color: #7d00ad;
+}
+
+.botao:active {
+   box-shadow: 0 0 10px #7d00ad;
+   background-color: #7d00ad;
+   border-color: #7d00ad;
+ }
