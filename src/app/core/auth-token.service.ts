@@ -14,12 +14,4 @@ export class AuthTokenService {
   public removeTokenUsuario() {
      localStorage.removeItem('token');
   }
-
-  public decodePayLoadJWT(): any {
-    try {
-      return jwt_decode(this.getToken());
-    } catch (err) {
-      console.info(err);
-    }
-  }
 }

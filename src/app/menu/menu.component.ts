@@ -4,7 +4,7 @@ import { Menu } from './Menu';
 import { AuthTokenService } from '../core/auth-token.service';
 import { LoginusuarioService } from '../login/loginusuario.service';
 import { ToastrService } from 'ngx-toastr';
-import { JwtHelperService } from '@auth0/angular-jwt';
+
 
 @Component({
   selector: 'app-menu',
@@ -30,12 +30,8 @@ export class MenuComponent implements OnInit {
   }
 
   Sair() {
-    console.info("Sair");
-    this.loginUsuario.logoutUsuario().subscribe(() => {
       this.serviceUser.removeTokenUsuario();
       this.rotas.navigate(['login']);
-    },
-     err => this.toaster.error('Alguma coisa deu errado'));
   }
 
   OpenMenu() {

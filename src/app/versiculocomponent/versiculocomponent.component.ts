@@ -11,22 +11,25 @@ import { VersiculoserviceService } from './versiculoservice.service';
 })
 export class VersiculocomponentComponent implements OnInit {
 
-  versiculo : Versiculo;
-  constructor(private serviceVersiculo: VersiculoserviceService, private route : ActivatedRoute) { }
+  versiculo: Versiculo;
+  constructor(private serviceVersiculo: VersiculoserviceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.versiculo = this.route.snapshot.data['versiculoresolver'];
+    this.CarregarVersiculo();
   }
 
-  CarregarVersiculo(){
-   this.serviceVersiculo.RandomVersiculo().subscribe(result => {
-    if(result===null)
-    {
-       this.versiculo = result;
-    }else{
-       this.versiculo.text = "Eita nenhum versiculo carregado :(";
-    }
-   });
+  CarregarVersiculo() {
+    let sessionVersiculo = JSON.parse(sessionStorage.getItem("versiculo"));
+    if (sessionVersiculo) {
+      this.versiculo = sessionVersiculo;
+    } else {
+      this.serviceVersiculo.RandomVersiculo().subscribe(result => {
+        if (result != null) {
+          sessionStorage.setItem("versiculo", JSON.stringify(result));
+          return this.versiculo = result;
+        }
+      })
+    };
   }
 
 }

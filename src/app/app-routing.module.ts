@@ -9,16 +9,22 @@ import { AutenticacaoUsuario } from './core/AutenticacaoUsuario';
 
 
 const routes: Routes = [
+  {path: '', component: LoginComponent},
   { path:'login', component:LoginComponent},
   { path: 'cadastrologin', component: CadastroLoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'Home',
     component: MenuLateralComponent,
     children: [
-      { path: 'Sermon', component: HomeSermonComponent, canActivate: [AutenticacaoUsuario] , resolve:{versiculoresolver : VersiculoResolver}}
+      { 
+      path: 'Sermon', 
+      component: HomeSermonComponent,
+      canActivate: [AutenticacaoUsuario] 
+      //resolve:{versiculoresolver : VersiculoResolver}
+    }
     ]
-  }
+  },
+  {path: '**', component: LoginComponent}
 ];
 
 @NgModule({

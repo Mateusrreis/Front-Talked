@@ -22,15 +22,15 @@ export class LoginusuarioService {
   constructor(private http : HttpClient) { }
   
   enviarUsuario(usuario: Usuario){
-     return this.http.post('/Usuario/CadastrarUsuario',usuario)
+     return this.http.post('https://localhost:44301/Usuario/CadastrarUsuario',usuario,httpOptions)
   }
 
   validarUsuarioExiste(usuario: string) {
-    return this.http.post('/Usuario/BuscarUsuario', JSON.stringify(usuario), httpOptions);
+    return this.http.post('https://localhost:44301/Usuario/BuscarUsuario', JSON.stringify(usuario), httpOptions);
   }
 
   validarEmailExiste(usuario: string) {
-    return this.http.post('/Usuario/BuscarEmail', JSON.stringify(usuario), httpOptions);
+    return this.http.post('https://localhost:44301/Usuario/BuscarEmail', JSON.stringify(usuario), httpOptions);
   }
 
   loginUsuario(usuario: Usuario) : Observable<HttpResponse<Config>>{
