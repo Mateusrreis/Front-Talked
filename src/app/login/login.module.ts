@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomesermonModule } from '../home-sermon/homesermon.module';
 import { MenuModule } from '../menu/menu.module';
+import { RecuperarUsuarioComponent } from '../recuperar-usuario/recuperar-usuario.component';
 
 
 
@@ -13,7 +14,8 @@ import { MenuModule } from '../menu/menu.module';
 @NgModule({
   declarations: [
     LoginComponent,
-    CadastroLoginComponent
+    CadastroLoginComponent,
+    RecuperarUsuarioComponent
   ],
   imports: [
     CommonModule,

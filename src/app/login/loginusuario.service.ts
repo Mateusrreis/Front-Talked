@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable} from 'rxjs';
-import { tap, catchError, map, first } from 'rxjs/operators';
 import { Usuario } from './cadastro-login/Usuario';
 import { Config } from 'protractor';
+import { ThrowStmt } from '@angular/compiler';
 
 
 const httpOptions = {
@@ -40,4 +40,9 @@ export class LoginusuarioService {
   logoutUsuario() {
     return this.http.post('https://localhost:44301/Usuario/LogoutUsuario', httpOptions);
   }
+
+  validarUsuario(token : string){
+    return this.http.post('https://localhost:44301/Usuario/ValidarUsuarioRecuperacao',JSON.stringify(token),httpOptions);
+  }
+
 }

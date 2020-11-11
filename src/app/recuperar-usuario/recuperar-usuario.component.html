@@ -1,0 +1,28 @@
+<div class="ImagemCentralInicial">
+    <div class="row">
+
+        <div class="col-4">
+
+        </div>
+        <div class="col-4 CadastroUsuario">
+            <div class="card" id="CardCadastro">
+                <div class="card-body">
+                    <div *ngIf="validUser === true; else elseblock">
+                        <input type="password" class="form-control corInput fontText" placeholder="Digite sua senha" required/>
+                        <input type="password" class="form-control corInput fontText" placeholder="Digite sua confirmação de senha" required/>
+                    </div>
+                    <ng-template #elseblock>
+                        Usuario não validado
+                    </ng-template>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-4">
+
+    </div>
+</div>
