@@ -7,6 +7,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomesermonModule } from '../home-sermon/homesermon.module';
 import { MenuModule } from '../menu/menu.module';
 import { RecuperarUsuarioComponent } from '../recuperar-usuario/recuperar-usuario.component';
+import { RecuperarUsuarioEmailComponent } from '../recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
 
 
 
@@ -15,7 +16,8 @@ import { RecuperarUsuarioComponent } from '../recuperar-usuario/recuperar-usuari
   declarations: [
     LoginComponent,
     CadastroLoginComponent,
-    RecuperarUsuarioComponent
+    RecuperarUsuarioComponent,
+    RecuperarUsuarioEmailComponent
   ],
   imports: [
     CommonModule,

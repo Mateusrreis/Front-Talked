@@ -7,6 +7,7 @@ import { MenuLateralComponent } from './menu/menu-lateral/menu-lateral.component
 import { VersiculoResolver } from './versiculocomponent/versiculoresolver.resolver';
 import { AutenticacaoUsuario } from './core/AutenticacaoUsuario';
 import { RecuperarUsuarioComponent } from './recuperar-usuario/recuperar-usuario.component';
+import { RecuperarUsuarioEmailComponent } from './recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastrologin', component: CadastroLoginComponent },
   { path: 'recuperacaoUsuario', component: RecuperarUsuarioComponent },
+  { path: 'validacaoUsuario', component: RecuperarUsuarioEmailComponent },
   {
     path: 'Home',
     component: MenuLateralComponent,

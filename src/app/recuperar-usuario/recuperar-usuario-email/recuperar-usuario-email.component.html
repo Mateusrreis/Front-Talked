@@ -1,0 +1,25 @@
+<div class="ImagemCentralInicial">
+    <div class="row">
+
+        <div class="col-4">
+        </div>
+        <div class="col-4 CadastroUsuario">
+            <div class="card" id="CardCadastro">
+                <div class="card-body">
+                        <form [formGroup]="formularioEmailRecuperacao">
+                        <span>Digite o email que foi criado junto com seu cadastro de usuario</span>
+                        <input type="email" class="form-control corInput fontText" formControlName="email" placeholder="Digite seu Email" required/>
+                        <p class="errorValidation" *ngIf="formularioEmailRecuperacao.get('email').errors?.required && formularioEmailRecuperacao.get('email').touched">Campo obrigatório</p>
+                        <p class="errorValidation" *ngIf="formularioEmailRecuperacao.get('email').errors?.email && formularioEmailRecuperacao.get('email').touched">Email Inválido</p>
+                        <button class="btn btn-primary botaoEnviar" (click)="EnviarSolicitacao()" [disabled]="(formularioEmailRecuperacao.invalid)">Enviar email</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-4">
+
+    </div>
+</div>
