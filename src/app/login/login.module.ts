@@ -8,6 +8,9 @@ import { HomesermonModule } from '../home-sermon/homesermon.module';
 import { MenuModule } from '../menu/menu.module';
 import { RecuperarUsuarioComponent } from '../recuperar-usuario/recuperar-usuario.component';
 import { RecuperarUsuarioEmailComponent } from '../recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
+import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
+import { PasswordDirectiveDirective } from '../core/password-directive.directive';
+
 
 
 
@@ -17,7 +20,8 @@ import { RecuperarUsuarioEmailComponent } from '../recuperar-usuario/recuperar-u
     LoginComponent,
     CadastroLoginComponent,
     RecuperarUsuarioComponent,
-    RecuperarUsuarioEmailComponent
+    RecuperarUsuarioEmailComponent,
+    PasswordDirectiveDirective
   ],
   imports: [
     CommonModule,
@@ -26,7 +30,7 @@ import { RecuperarUsuarioEmailComponent } from '../recuperar-usuario/recuperar-u
     ReactiveFormsModule,
     HomesermonModule,
     MenuModule,
-    
+    PasswordStrengthBarModule
   ]
 })
 export class LoginModule { }

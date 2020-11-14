@@ -11,6 +11,7 @@ import { RecuperarUsuarioComponent } from './recuperar-usuario/recuperar-usuario
 import { RecuperarUsuarioEmailComponent } from './recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
 
 
+
 export function tokenGetter() {
   return localStorage.getItem("token");
 }

@@ -13,11 +13,9 @@ export class RecuperarUsuarioEmailComponent implements OnInit {
   formularioEmailRecuperacao : FormGroup;
   ngOnInit() {
     this.formularioEmailRecuperacao = this.fb.group({
-      email:['',Validators.required,Validators.email]
+      email:['',[Validators.required,Validators.email]]
     });
   }
-
-
 
   EnviarSolicitacao(){
    this.Email = this.formularioEmailRecuperacao.value.email;
