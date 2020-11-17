@@ -19,7 +19,9 @@ export class RecuperarUsuarioEmailComponent implements OnInit {
 
   EnviarSolicitacao(){
    this.Email = this.formularioEmailRecuperacao.value.email;
-   this.loginService.solicitacaoUsuario(this.Email)
+   this.loginService.solicitacaoUsuario(this.Email).subscribe(result => {
+     console.info(result);
+   })
   }
 
 }

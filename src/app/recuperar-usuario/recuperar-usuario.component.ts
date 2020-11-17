@@ -22,12 +22,18 @@ export class RecuperarUsuarioComponent implements OnInit {
     private loginService: LoginusuarioService) { }
 
   ngOnInit() {
-    //this.VerificarTokenUsuario();
-    this.validUser=true;
+    this.VerificarTokenUsuario();
   }
 
-  SubmitPwd(form){
-    console.info(form);
+  SubmitPwd(form: FormGroup){
+    let recuperacaoUsuario = {
+      Token: this.route.snapshot.queryParamMap.get('token'),
+       Senha: form.value.pwd,
+       ConfirmacaoSenha: form.value.pwdConfirm
+    }
+    this.loginService.recuperarSenha(recuperacaoUsuario).subscribe(result=> {
+      console.log(result);
+    });
   }
 
   VerificarTokenUsuario() {

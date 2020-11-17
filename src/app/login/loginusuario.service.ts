@@ -45,8 +45,13 @@ export class LoginusuarioService {
     return this.http.post('https://localhost:44301/Usuario/ValidarUsuarioRecuperacao',JSON.stringify(token),httpOptions);
   }
 
-  solicitacaoUsuario(email:string){
-     this.http.post('https://localhost:44301/Usuario/RecuperarUsuario',JSON.stringify(email),httpOptions);
+  solicitacaoUsuario(email:string) {
+    return this.http.post('https://localhost:44301/Usuario/RecuperarUsuario',JSON.stringify(email),httpOptions);
   }
+  
+  recuperarSenha(usuario:any){
+    return this.http.post('https://localhost:44301/Usuario/AtualizarUsuario',usuario,httpOptions);
+  }
+
 
 }
