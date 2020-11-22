@@ -6,21 +6,21 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav">
-      <li (click)="OpenMenu()"><i class="fas fa-bars colorhamburger"></i></li>
-      <li class=""><div class="imagemLogo"></div></li> 
-    </ul>
-    <div *ngIf="Authenticated === true; else logarUsuario">
+      <li (click)="OpenMenu()"><i class="fas fa-bars colorhamburger fa-lg"></i></li>
+      <li><div class="imagemLogo"></div></li>
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Olá {{User}}
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="btn configUsuario" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog fa-lg"></i></button> 
+        <div class="dropdown-menu posicaomenu" aria-labelledby="dropdownMenu2">
           <button class="dropdown-item" type="button">Configurações</button>
           <button class="dropdown-item" type="button" (click)="Sair()">Sair</button>
         </div>
       </div>
+    </ul>
+    <!-- <div *ngIf="Authenticated === true; else logarUsuario"> -->
+      
+        
       <ng-template #logarUsuario><a class="btn btn-primary" href="/login">Login</a></ng-template>
-    </div>
+    <!-- </div> -->
     </div>
 </nav>
 

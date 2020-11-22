@@ -34,14 +34,7 @@
   box-shadow: 0 0 10px #7d00ad;
 }
 
-.errorValidation {
-  margin-bottom:4px;
-  margin-left:4px;
-  color: #f34336;
-  font-size: 10.5px;
-  font-weight: 700;
-  word-break:break-word;
-}
+
 
 .errorValidation:before {
   margin-bottom: 4px;

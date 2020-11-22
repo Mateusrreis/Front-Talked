@@ -5,5 +5,44 @@
 .personJubotron{
     margin-right:0px;
     margin-left:0px;
-    padding-bottom:5.5%;
+    padding-bottom:17.5%;
+    background-image: url("../Style/Images/capaHome.png");
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
+
+
+
+.positionTitle{
+    position: relative;
+    top: 89%;
+    left: 22%;
+    margin-bottom: 3%;
+}
+
+.positionInputHome{
+    position: relative;
+    top: 92%;
+    left: 7%;
+}
+
+.positionVerso{
+    position: relative;
+    top: 109%;
+    left: 43%;
+}
+
+.TamanhoCard{
+    width: 18rem;
+    height: 23rem;
+}
+
+.cardCustom:hover{
+    box-shadow: 0px -2px 15px 1px rgba(125,0,173,0.47);
+    -webkit-box-shadow: 0px -2px 15px 1px rgba(125,0,173,0.47);
+    -moz-box-shadow: 0px -2px 15px 1px rgba(125,0,173,0.47);
+    transition-duration: 1s;
+}
+
+
+
