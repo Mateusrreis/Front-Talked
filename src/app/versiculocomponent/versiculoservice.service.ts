@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { Versiculo } from '../core/Models/Versiculo';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -19,10 +20,13 @@ const httpOptions = {
 
 export class VersiculoserviceService {
 
-  constructor(private http:HttpClient) { }
+  ambiente:string;
+  constructor(private http:HttpClient) { 
+    this.ambiente = environment.hostApi;
+  }
 
   RandomVersiculo(): Observable<Versiculo> {
-   return this.http.post<Versiculo>('https://localhost:44301/Home/BuscarVersiculoRamdom',httpOptions);
+   return this.http.get<Versiculo>(this.ambiente +'/Versiculo/BuscarVersiculoRamdom',httpOptions);
   }
 
 }

@@ -45,7 +45,7 @@ export class CadastroLoginComponent implements OnInit {
   buscarEmail(email) {
     if (email.target.value.length > 8)
       this.servico.validarEmailExiste(email.target.value).subscribe((usuario) => {
-        if (usuario === null)
+        if (usuario)
           this.validacaoEmail = true;
         else
           this.validacaoEmail = false;

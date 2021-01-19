@@ -18,7 +18,7 @@
                 <input type="email" id="email" name="email" class="form-control corInput fontText" placeholder="Digite seu Email" formControlName="email" (keyup)="buscarEmail($event)" required>
                 <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('emails.email').errors?.required && formularioDeCadastroUsuario.get('emails.email').touched">Campo obrigatório</p>
                 <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('emails.email').errors?.email && formularioDeCadastroUsuario.get('emails.email').touched">Email Inválido</p>
-                <p class="errorValidation" *ngIf="!validacaoEmail && formularioDeCadastroUsuario.get('emails.email').touched">Email já existe</p>
+                <p class="errorValidation" *ngIf="validacaoEmail && formularioDeCadastroUsuario.get('emails.email').touched">Email já existe</p>
 
               </div>
               <div class="form-group">
@@ -39,7 +39,7 @@
                 <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('passwords.ConfirmSenha').errors?.required && formularioDeCadastroUsuario.get('passwords.ConfirmSenha').touched">Campo obrigatório</p>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary botaoEnviar" id="enviar" [disabled]="(formularioDeCadastroUsuario.invalid || !validacaoEmail)" (click)="enviarUsuario()">
+            <button type="submit" class="btn btn-primary botaoEnviar" id="enviar" [disabled]="(formularioDeCadastroUsuario.invalid || validacaoEmail)" (click)="enviarUsuario()">
               Enviar
             </button>
             <a href="/login" class="fontText textoCorrentCadastro">Já tenho uma conta</a>

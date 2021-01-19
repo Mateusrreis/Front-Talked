@@ -12,8 +12,8 @@ import { Validacoes } from '../Validacoes/Validacoes';
 export class RecuperarUsuarioComponent implements OnInit {
 
   token: string;
+  validToken: boolean;
   validUser: boolean;
-  
   public pwd: string;
   pwdConfirm: string;
   barLabel: string = "Força de senha:";
@@ -32,7 +32,7 @@ export class RecuperarUsuarioComponent implements OnInit {
        ConfirmacaoSenha: form.value.pwdConfirm
     }
     this.loginService.recuperarSenha(recuperacaoUsuario).subscribe(result=> {
-      console.log(result);
+      this.validUser = result;
     });
   }
 
@@ -41,14 +41,14 @@ export class RecuperarUsuarioComponent implements OnInit {
     if (this.token != null) {
       this.loginService.validarUsuario(this.token).subscribe(result => {
         if (result) {
-          this.validUser = true;
+          this.validToken = true;
         }
         else {
-         this.validUser = false;
+         this.validToken = false;
         }
       })
     } else {
-      this.validUser = false;
+      this.validToken = false;
     }
   }
 }
