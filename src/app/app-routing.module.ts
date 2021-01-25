@@ -8,6 +8,7 @@ import { VersiculoResolver } from './versiculocomponent/versiculoresolver.resolv
 import { AutenticacaoUsuario } from './core/AutenticacaoUsuario';
 import { RecuperarUsuarioComponent } from './recuperar-usuario/recuperar-usuario.component';
 import { RecuperarUsuarioEmailComponent } from './recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
+import { SettingsUserComponent } from './home-sermon/settings-user/settings-user.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,11 @@ const routes: Routes = [
         component: HomeSermonComponent,
         canActivate: [AutenticacaoUsuario]
         //resolve:{versiculoresolver : VersiculoResolver}
+      },
+      {
+        path:'Configuracoes',
+        component: SettingsUserComponent,
+        canActivate:[AutenticacaoUsuario]
       }
     ]
   },

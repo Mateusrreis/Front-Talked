@@ -61,7 +61,7 @@ export class CadastroLoginComponent implements OnInit {
     this.servico.enviarUsuario(this.usuario).subscribe(result => {
       if (result !== null) {
         this.toastr.success('Usuario criado', 'Iremos te redirecionar para a tela de login');
-        setTimeout(() => this.rotas.navigate(['/login']), 2200);
+        setTimeout(() => this.rotas.navigate(['/login']), 5000);
       }
     },
       error => this.toastr.error('Opa aconteceu algum erro', 'Verifique se as informações estão corretas')

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
@@ -8,7 +9,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class HomeSermonComponent implements OnInit {
 
-  constructor(private jwtToken : JwtHelperService) { }
+  constructor(private jwtToken : JwtHelperService, private rotas : Router) { }
   User: any;
   ngOnInit() {
     this.verificarUsuario();
@@ -16,6 +17,10 @@ export class HomeSermonComponent implements OnInit {
 
   verificarUsuario(){
     this.User = this.jwtToken.decodeToken();
+  }
+
+  goToSettings(){
+    this.rotas.navigate(["/Home/Configuracoes"]);
   }
 
 }

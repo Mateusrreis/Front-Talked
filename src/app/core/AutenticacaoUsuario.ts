@@ -9,9 +9,7 @@ import { Observable } from "rxjs";
 
 export class AutenticacaoUsuario implements CanActivate{
 
-    constructor(private router: Router, private jwtHelper : JwtHelperService){
-
-    }
+    constructor(private router: Router, private jwtHelper : JwtHelperService){}
     canActivate(): boolean {
         const token  = localStorage.getItem('token');
         if(token!=null && !this.jwtHelper.isTokenExpired()){
