@@ -42,4 +42,8 @@ export class MenuComponent implements OnInit {
     document.getElementById("mySidenav").style.width = "0";
   }
  
+  goToSettings(){
+    this.rotas.navigate(["/Home/Configuracoes"]);
+  }
+
 }

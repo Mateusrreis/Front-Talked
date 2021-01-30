@@ -23,4 +23,5 @@ export class HomeSermonComponent implements OnInit {
     this.rotas.navigate(["/Home/Configuracoes"]);
   }
 
+  
 }

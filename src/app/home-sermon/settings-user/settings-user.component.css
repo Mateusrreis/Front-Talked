@@ -1,4 +1,17 @@
-.box{
-border: 0.5px;
-color: black;
+a{
+    color: #7d00ad;
 }
+
+
+.nav-pills .nav-link{
+    border-radius: 30rem;
+}
+
+.nav-pills .nav-link:hover{
+    border-color:  #7d00ad;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #7d00ad;
+}
+
