@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { element } from 'protractor';
 
 @Component({
@@ -8,7 +9,7 @@ import { element } from 'protractor';
 })
 export class SettingsUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(rotas:Router) { }
 
   ngOnInit() {
   }

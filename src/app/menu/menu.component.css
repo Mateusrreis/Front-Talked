@@ -13,10 +13,11 @@
 }
 
 .imagemLogo {
-  background: url(../Style/Images/simbolo.png);
+  background: url(/assets/Style/Images/simbolo.png);
   background-repeat:no-repeat;
-  background-size:cover;
-  padding:30px;
+  background-size:contain;
+  padding:45px;
+  padding-bottom: 19px;
   position: relative;
   top:0.5rem;
   left: 55rem;

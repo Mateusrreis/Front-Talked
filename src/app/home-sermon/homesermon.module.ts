@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeSermonComponent } from './home-sermon.component';
 import { VersiculocomponentComponent } from '../versiculocomponent/versiculocomponent.component';
 import { SettingsUserComponent } from './settings-user/settings-user.component';
+import { SettingsListUserComponent } from './settings-user/settings-list-user/settings-list-user.component';
 
 
 
@@ -10,7 +11,8 @@ import { SettingsUserComponent } from './settings-user/settings-user.component';
   declarations: [
     HomeSermonComponent,
     VersiculocomponentComponent,
-    SettingsUserComponent
+    SettingsUserComponent,
+    SettingsListUserComponent
   ],
   imports: [
     CommonModule

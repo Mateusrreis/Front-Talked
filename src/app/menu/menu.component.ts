@@ -46,4 +46,8 @@ export class MenuComponent implements OnInit {
     this.rotas.navigate(["/Home/Configuracoes"]);
   }
 
+  goToHome(){
+    this.rotas.navigate(["/Home/Sermon"])
+  }
+
 }

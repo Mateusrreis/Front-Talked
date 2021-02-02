@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   usuario: Usuario = new Usuario();
   Menu: Menu[];
+  readonly BOARDKEY : string ="Enter";
   constructor(private toastr: ToastrService, private servico: LoginusuarioService, private rotas: Router) { }
 
   
@@ -43,6 +44,13 @@ export class LoginComponent implements OnInit {
     
   }
 
+  VerifyBoardKey($event){
+    let events = <KeyboardEvent> $event;
+    if(events.key==this.BOARDKEY)
+    {
+      this.Logar(this.usuario);
+    }
+  }
   
 
 

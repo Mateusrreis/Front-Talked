@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "startOpen":"ng serve --open",
     "build": "ng build",
     "build:ssr": "ng run AngularApp:server:dev",
     "test": "ng test",

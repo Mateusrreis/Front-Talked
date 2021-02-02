@@ -3,7 +3,7 @@
     <div class="ImagemCentralInicial">
       <div id="login-row" class="row justify-content-center align-items-center">
         <br />
-        <div class="card" id="CardLogin">
+        <div class="card" id="CardLogin" (keyup)="VerifyBoardKey($event)">
           <div class="card-body">
             <form>
               <h4 class="titlePerfil fontText">Entre para acessar o seu perfil:</h4>
