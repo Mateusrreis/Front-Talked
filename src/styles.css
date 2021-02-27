@@ -1,29 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+You can add global styles to this file, and also import other style files
 
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
-
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 code {
   color: #e01a76;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-@font-face {
-  font-family: josefinsans;
-  src: local(josefinsans) url('/Style/fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
 }
 
 .ImagemCentralInicial {
@@ -35,37 +16,6 @@ code {
   background-size: cover;
 }
 
-.inputCustom{
-  -webkit-box-shadow: -0.5px 0px 14px -5px #0c0b0c;
-  -moz-box-shadow: -0.5px 0px 14px -5px #0c0b0c;
-  box-shadow: -0.5px 0px 14px -5px #0c0b0c;
-  color: #7d00ad;
-}
-
-.inputCustom:focus{
-  -webkit-box-shadow: -4px 0px 19px -1px #7d00ad;
-  -moz-box-shadow: -4px 0px 19px -1px #7d00ad;
-  box-shadow: -4px 0px 19px -1px #7d00ad;
-  color: #7d00ad;
-}
-
-.botao{
-  background-color: #7d00ad;
-  border-color: #7d00ad;
-}
-
-.botao:focus {
-  box-shadow: 0 0 10px #7d00ad;
-  background-color: #7d00ad;
-  border-color: #7d00ad;
-}
-
-.botao:active {
-   box-shadow: 0 0 10px #7d00ad;
-   background-color: #7d00ad;
-   border-color: #7d00ad;
- }
-
  .errorValidation {
   margin-bottom:4px;
   margin-left:4px;
@@ -74,3 +24,5 @@ code {
   font-weight: 700;
   word-break:break-word;
 }
+
+

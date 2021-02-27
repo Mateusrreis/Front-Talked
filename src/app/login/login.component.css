@@ -1,70 +1,17 @@
-.corInput {
-  border:1.3px solid;
-  border-color: #7d00ad;
+.mat-card{
+    padding: 45px;
 }
 
-.fontText {
-  color: black;
-  font-weight:500;
-}
-.corInput:focus {  
-  border: 1px solid;
-  box-shadow: 0 0 10px #7d00ad;
+.mat-form-field{
+    width:212px;
 }
 
-.titlePerfil{
-  margin:50px 7px;
-  font-size:19px;
+.button-center-login{
+   margin-left: 75px;
 }
 
-.botaoEntrar {
-  background-color: #7d00ad;
-  padding: 0.4rem 6.9rem;
-  border-color: #7d00ad;
-  position: relative;
-  left: 2px;
-  top: -16px;
+.mat-card-title{
+    font-size:25px;
+    font-weight: 400;
+    margin-bottom: 33px;
 }
-
-.botaoEntrar:focus {
-  box-shadow: 0 0 10px #7d00ad;
-  background-color: #7d00ad;
-  padding: 0.4rem 6.9rem;
-  position: relative;
-  left: 2px;
-  top: -16px;
-}
-
-.botaoEntrar:active {
-   box-shadow: 0 0 10px #7d00ad;
-   background-color: #7d00ad;
-   padding: 0.4rem 6.9rem;
-   position: relative;
-   left: 2px;
-   top: -16px;
- }
-
-
-#CardLogin {
-  position: relative;
-  top: 200px;
-  -webkit-box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
-  -moz-box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
-  box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
-}
-.textoCorrentSenha {
-  color: #7d00ad;
-  font-size: 12.5px;
-  position: relative;
-  left: 139px;
-}
-
-.textoCorrentCadastro {
-  color: #7d00ad;
-  font-size: 12.5px;
-  position: relative;
-  left: 55px;
-}
-
-
-

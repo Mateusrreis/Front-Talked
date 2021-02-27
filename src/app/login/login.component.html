@@ -1,30 +1,40 @@
-<div class="row">
-  <div class="col-12">
-    <div class="ImagemCentralInicial">
-      <div id="login-row" class="row justify-content-center align-items-center">
-        <br />
-        <div class="card" id="CardLogin" (keyup)="VerifyBoardKey($event)">
-          <div class="card-body">
-            <form>
-              <h4 class="titlePerfil fontText">Entre para acessar o seu perfil:</h4>
-              <div class="form-group">
-                <input type="text" class="form-control corInput fontText" id="Usuario" name="usuario" placeholder="Digite seu Email" [(ngModel)]="usuario.Email">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control corInput fontText" id="Senha" name="senha" placeholder="Digite sua Senha" [(ngModel)]="usuario.Senha">
-                <a href="/validacaoUsuario" class="btn btn-secundary textoCorrentSenha fontText">Esqueceu sua senha?</a>
-              </div>
-              <button type="button" class="btn btn-primary botaoEntrar" (click)="Logar(usuario)">Entrar</button>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="Lembrar" name="check" [(ngModel)]="usuario.Lembrar">
-                <label class="form-check-label" for="Lembrar">Lembrar de mim:</label>
-              </div>
-              <a href="/cadastrologin" class="btn btn-secundary  textoCorrentCadastro fontText">Deseja fazer o cadastro?</a>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  <div class="ImagemCentralInicial">
+  <mat-grid-list cols="1" rowHeight="1:1" rowHeight="600px">
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
 
+      <mat-card>
+        <div (keyup)="VerifyBoardKey($event)">
+
+          <mat-card-title>
+            Acessar
+          </mat-card-title>
+          <mat-card-content>
+            <mat-form-field class="example-full-width">
+              <input matInput type="text" class="form-control corInput fontText" id="Usuario" name="usuario"
+                placeholder="Digite seu Email" value="">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+              <input matInput type="text" class="form-control corInput fontText" id="Usuario" name="usuario"
+                placeholder="Digite seu Email" value="">
+            </mat-form-field>
+            <br>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="button-center-login">
+            <button mat-raised-button color="primary">Entrar</button>
+            </div>
+            <br>
+            <br>
+            <mat-checkbox class="example-margin">Lembrar de Mim</mat-checkbox>
+            <br>
+            <br>
+            <br>
+            <a href="/cadastrologin" mat-button>Deseja fazer o
+              cadastro?</a>
+          </mat-card-actions>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

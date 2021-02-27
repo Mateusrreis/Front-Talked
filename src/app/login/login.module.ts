@@ -10,6 +10,7 @@ import { RecuperarUsuarioComponent } from '../recuperar-usuario/recuperar-usuari
 import { RecuperarUsuarioEmailComponent } from '../recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
 import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
 import { PasswordDirectiveDirective } from '../core/password-directive.directive';
+import { MatButtonModule, MatCardModule, MatCheckbox, MatCheckboxModule, MatGridList, MatGridListModule, MatInputModule } from '@angular/material';
 
 
 
@@ -30,7 +31,12 @@ import { PasswordDirectiveDirective } from '../core/password-directive.directive
     ReactiveFormsModule,
     HomesermonModule,
     MenuModule,
-    PasswordStrengthBarModule
+    PasswordStrengthBarModule,
+    MatInputModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatCardModule,
+    MatCheckboxModule
   ]
 })
 export class LoginModule { }
