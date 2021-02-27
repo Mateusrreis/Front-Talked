@@ -22,25 +22,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+        <tr *ngFor="let usuario of ListUser; let i = index" [attr.data-index]="i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{usuario.nome}}</td>
+          <td>{{usuario.email}}</td>
+          <td><button class="btn btn-info">Opções</button></td>
         </tr>
       </tbody>
     </table>
   </div>
+  <nav aria-label="Navegação de página exemplo">
+    <ul class="pagination justify-content-center">
+    <li class="page-item"><button class="page-link" href="#" (click)="listUser()">Anterior</button></li>
+    <ul class="pagination justify-content-center" *ngFor="let item of Pagination">
+      <li class="page-item"><button class="page-link" >{{item}}</button></li>
+    </ul>
+    <li class="page-item"><button class="page-link" href="#">Próximo</button></li>
+  </ul>
+  </nav>
 </div>

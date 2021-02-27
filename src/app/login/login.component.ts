@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './cadastro-login/Usuario';
+import { Usuario } from '../core/Models/Usuario';
 import { LoginusuarioService } from './loginusuario.service';
 import { Router } from '@angular/router';
 import { error } from 'protractor';

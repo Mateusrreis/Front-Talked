@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable} from 'rxjs';
-import { Usuario } from './cadastro-login/Usuario';
+import { Usuario } from '../core/Models/Usuario';
 import { Config } from 'protractor';
 import { environment } from 'src/environments/environment';
 

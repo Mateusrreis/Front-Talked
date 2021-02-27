@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginusuarioService } from '../loginusuario.service';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { Usuario } from "./Usuario";
+import { Usuario } from "../../core/Models/Usuario";
 import { Router } from '@angular/router';
 import { Validacoes } from '../../Validacoes/Validacoes';
 import { ToastrService } from 'ngx-toastr';
@@ -52,21 +52,21 @@ export class CadastroLoginComponent implements OnInit {
       });
   }
 
-  enviarUsuario() {
-    this.usuario.Nome = this.formularioDeCadastroUsuario.value.nome;
-    this.usuario.Email = this.formularioDeCadastroUsuario.value.emails.email;
-    this.usuario.ConfirmacaoEmail = this.formularioDeCadastroUsuario.value.emails.ConfirmEmail;
-    this.usuario.Senha = this.formularioDeCadastroUsuario.value.passwords.senha;
-    this.usuario.ConfirmacaoSenha = this.formularioDeCadastroUsuario.value.passwords.ConfirmSenha;
-    this.servico.enviarUsuario(this.usuario).subscribe(result => {
-      if (result !== null) {
-        this.toastr.success('Usuario criado', 'Iremos te redirecionar para a tela de login');
-        setTimeout(() => this.rotas.navigate(['/login']), 5000);
-      }
-    },
-      error => this.toastr.error('Opa aconteceu algum erro', 'Verifique se as informações estão corretas')
-    );
-  }
+  // enviarUsuario() {
+  //   this.usuario.Nome = this.formularioDeCadastroUsuario.value.nome;
+  //   this.usuario.Email = this.formularioDeCadastroUsuario.value.emails.email;
+  //   this.usuario.ConfirmacaoEmail = this.formularioDeCadastroUsuario.value.emails.ConfirmEmail;
+  //   this.usuario.Senha = this.formularioDeCadastroUsuario.value.passwords.senha;
+  //   this.usuario.ConfirmacaoSenha = this.formularioDeCadastroUsuario.value.passwords.ConfirmSenha;
+  //   this.servico.enviarUsuario(this.usuario).subscribe(result => {
+  //     if (result !== null) {
+  //       this.toastr.success('Usuario criado', 'Iremos te redirecionar para a tela de login');
+  //       setTimeout(() => this.rotas.navigate(['/login']), 5000);
+  //     }
+  //   },
+  //     error => this.toastr.error('Opa aconteceu algum erro', 'Verifique se as informações estão corretas')
+  //   );
+  // }
 
   Cancelar() {
     this.rotas.navigate(['/login']);
