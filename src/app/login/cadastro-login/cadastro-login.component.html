@@ -1,58 +1,59 @@
 <div class="ImagemCentralInicial">
-  <div class="row">
-
-    <div class="col-4">
-
-    </div>
-    <div class="col-4 CadastroUsuario">
-
-      <div class="card" id="CardCadastro">
-        <div class="card-body">
+  <mat-grid-list cols="1" rowHeight="1:1" rowHeight="800px">
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+      <mat-card>
+        <mat-card-title>Cadastro de Usuarios</mat-card-title>
+        <mat-card-content>
           <form [formGroup]="formularioDeCadastroUsuario">
-            <div class="form-group">
-              <input type="text" class="form-control corInput fontText" placeholder="Digite seu Nome" formControlName="nome" required>
-              <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('nome').invalid && formularioDeCadastroUsuario.get('nome').touched">Nome requerido</p>
-            </div>
+            <mat-form-field appearance="outline">
+              <mat-label >Nome</mat-label>
+              <input matInput  placeholder="Digite seu Nome" formControlName="nome" required>
+              <mat-error *ngIf="formularioDeCadastroUsuario.get('nome').invalid && formularioDeCadastroUsuario.get('nome').touched">Nome obrigatório</mat-error>
+            </mat-form-field>
             <div formGroupName="emails">
-              <div class="form-group">
-                <input type="email" id="email" name="email" class="form-control corInput fontText" placeholder="Digite seu Email" formControlName="email" (keyup)="buscarEmail($event)" required>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('emails.email').errors?.required && formularioDeCadastroUsuario.get('emails.email').touched">Campo obrigatório</p>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('emails.email').errors?.email && formularioDeCadastroUsuario.get('emails.email').touched">Email Inválido</p>
-                <p class="errorValidation" *ngIf="validacaoEmail && formularioDeCadastroUsuario.get('emails.email').touched">Email já existe</p>
-
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control corInput fontText" placeholder="Confirme seu email aqui..." formControlName="ConfirmEmail" required>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('emails.ConfirmEmail').errors?.required && formularioDeCadastroUsuario.get('emails.ConfirmEmail').touched">Campo obrigatório</p>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('emails').invalid && formularioDeCadastroUsuario.get('emails.ConfirmEmail').touched">Emails não podem ser diferentes</p>
-              </div>
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput  type="email" id="email" name="email" placeholder="Digite seu Email" formControlName="email" (keyup)="buscarEmail($event)" required>
+                <mat-error *ngIf="formularioDeCadastroUsuario.get('emails.email').errors?.required && formularioDeCadastroUsuario.get('emails.email').touched">Email obrigatório</mat-error>
+                <mat-error *ngIf="formularioDeCadastroUsuario.get('emails.email').errors?.email && formularioDeCadastroUsuario.get('emails.email').touched">Email Inválido</mat-error>
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="outline">
+                <mat-label>Confirmação de Email</mat-label>
+                <input matInput type="email" placeholder="Confirme seu email aqui..." formControlName="ConfirmEmail" required>
+                <mat-error *ngIf="formularioDeCadastroUsuario.get('emails.ConfirmEmail').errors?.required && formularioDeCadastroUsuario.get('emails.ConfirmEmail').touched">Campo obrigatório</mat-error>
+                <mat-error *ngIf="formularioDeCadastroUsuario.get('emails').invalid && formularioDeCadastroUsuario.get('emails.ConfirmEmail').touched">Emails não podem ser diferentes</mat-error>
+              </mat-form-field>
             </div>
+            <br>
             <div formGroupName="passwords">
-              <div class="form-group">
-                <input type="password" class="form-control corInput fontText" id="senha" placeholder="Digite sua Senha" formControlName="senha" required>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('passwords.senha').errors?.required && formularioDeCadastroUsuario.get('passwords.senha').touched">Campo obrigatório</p>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('passwords.senha').errors?.minLength && formularioDeCadastroUsuario.get('passwords.senha').touched">Senha precisa ser maior que 5 caracteres</p>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control corInput fontText" id="ConfirmSenha" placeholder="Confirme sua Senha" formControlName="ConfirmSenha" required>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('passwords').invalid && formularioDeCadastroUsuario.get('passwords.ConfirmSenha').touched">Senhas diferentes </p>
-                <p class="errorValidation" *ngIf="formularioDeCadastroUsuario.get('passwords.ConfirmSenha').errors?.required && formularioDeCadastroUsuario.get('passwords.ConfirmSenha').touched">Campo obrigatório</p>
-              </div>
+              <mat-form-field appearance="outline">
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" id="senha" name="senha" placeholder="Digite sua senha" formControlName="senha" required>
+                <mat-error *ngIf="formularioDeCadastroUsuario.get('passwords.senha').errors?.required && formularioDeCadastroUsuario.get('passwords.senha').touched">Campo obrigatório</mat-error>
+                <mat-error *ngIf="formularioDeCadastroUsuario.get('passwords.senha').errors?.minLength && formularioDeCadastroUsuario.get('passwords.senha').touched">Senha precisa ser maior que 5 caracteres</mat-error>
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="outline">
+                <mat-label>Confirmação de Senha</mat-label>
+                <input matInput type="password" id="ConfirmSenha" placeholder="Confirme sua Senha" formControlName="ConfirmSenha" required>
+                <mat-error  *ngIf="formularioDeCadastroUsuario.get('passwords').invalid && formularioDeCadastroUsuario.get('passwords.ConfirmSenha').touched">Senhas diferentes </mat-error>
+                <mat-error  *ngIf="formularioDeCadastroUsuario.get('passwords.ConfirmSenha').errors?.required && formularioDeCadastroUsuario.get('passwords.ConfirmSenha').touched">Campo obrigatório</mat-error>
+              </mat-form-field>
             </div>
-            <button type="submit" class="btn btn-primary botaoEnviar" id="enviar" [disabled]="(formularioDeCadastroUsuario.invalid || validacaoEmail)" (click)="enviarUsuario()">
+            <br>
+            <button type="submit" mat-raised-button id="enviar" [disabled]="(formularioDeCadastroUsuario.invalid || validacaoEmail)" (click)="enviarUsuario()">
               Enviar
             </button>
-            <a href="/login" class="fontText textoCorrentCadastro">Já tenho uma conta</a>
+            <br>
+            <br>
+            <a href="/login" mat-button>Já tenho uma conta</a>
           </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="col-4">
-
-  </div>
+        </mat-card-content>
+    </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+   
 </div>
 
 

@@ -25,6 +25,7 @@ export class CadastroLoginComponent implements OnInit {
     this.validacaoEmail = false;
     this.criarformularioCadastro();
   }
+
   criarformularioCadastro() {
     this.formularioDeCadastroUsuario = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(5)]],

@@ -12,9 +12,8 @@ import { SettingsListUserComponent } from './home-sermon/settings-user/settings-
 
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
   { path: 'Login', component: LoginComponent },
-  { path: 'Cadastrologin', component: CadastroLoginComponent },
+  { path: 'Cadastro', component: CadastroLoginComponent },
   { path: 'RecuperacaoUsuario', component: RecuperarUsuarioComponent },
   { path: 'ValidacaoUsuario', component: RecuperarUsuarioEmailComponent },
   {

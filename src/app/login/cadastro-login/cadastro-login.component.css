@@ -1,14 +1,3 @@
-#CardCadastro {
-  min-width:345px;
-  padding: 10% 5% 6% 2%;
-  margin-left: 40%;
-  position: relative;
-  top: 18%;
-  right:24%; 
-  -webkit-box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
-  -moz-box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
-  box-shadow: 6px 3px 35px -9px rgba(0,0,0,0.67);
-}
 
 .textoCorrentCadastro {
   color: #7d00ad;
@@ -18,23 +7,6 @@
   left: 2px;
   top:13px;
 }
-
-.fontText {
-  color: #7d00ad;
-  font-weight: 500;
-}
-
-.corInput {
-  border: 1.3px solid;
-  border-color: #7d00ad;
-}
-
-.corInput:focus {
-  border: 1px solid;
-  box-shadow: 0 0 10px #7d00ad;
-}
-
-
 
 .errorValidation:before {
   margin-bottom: 4px;
@@ -47,20 +19,11 @@
   content:"*";
 }
 
-.botaoEnviar {
-  background-color: #7d00ad;
-  padding: 0.4rem 7.5rem;
-  border-color: #7d00ad;
-  position: relative;
-  left: 2px;
-  top: 5px;
+.mat-card{
+  margin-top: 20px;
+  padding: 40px;
 }
 
-.botaoEnviar:focus {
-  box-shadow: 0 0 10px #7d00ad;
-  background-color: #7d00ad;
-  padding: 0.4rem 7.5rem;
-  position: relative;
-  left: 2px;
-  top: 5px;
+.mat-form-field {
+  width: 300px;
 }

@@ -18,8 +18,9 @@ export class LoginComponent implements OnInit {
   usuario: Usuario = new Usuario();
   Menu: Menu[];
   readonly BOARDKEY : string ="Enter";
+  hide:boolean =true;
   constructor(private toastr: ToastrService, private servico: LoginusuarioService, private rotas: Router) { }
-
+  primary : string = "primary";
   
   ngOnInit(): void {
     this.Menu = [{
