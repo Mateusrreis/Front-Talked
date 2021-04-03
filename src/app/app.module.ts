@@ -36,6 +36,5 @@ export function tokenGetter() {
   ],
   providers: [],
   bootstrap: [AppComponent]
- 
 })
 export class AppModule { }

@@ -1,10 +1,8 @@
 <div class="ImagemCentralInicial">
-  <mat-grid-list cols="1" rowHeight="1:1" rowHeight="600px">
-    <mat-grid-tile [colspan]=1 [rowspan]=1>
-
+  <mat-grid-list cols="1" rowHeight="1:1">
+    <mat-grid-tile>
       <mat-card>
         <div (keyup)="VerifyBoardKey($event)">
-
           <mat-card-title>
             Acessar
           </mat-card-title>
@@ -32,8 +30,6 @@
             <br>
             <mat-checkbox class="example-margin" [color]="primary">Lembrar de Mim</mat-checkbox>
             <br>
-            <br>
-            <br>
             <a href="/Cadastro" mat-button>Deseja fazer o
               cadastro?</a>
           </mat-card-actions>
@@ -42,3 +38,9 @@
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list> -->

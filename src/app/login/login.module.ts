@@ -10,9 +10,13 @@ import { RecuperarUsuarioComponent } from '../recuperar-usuario/recuperar-usuari
 import { RecuperarUsuarioEmailComponent } from '../recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
 import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
 import { PasswordDirectiveDirective } from '../core/password-directive.directive';
-import { MatButtonModule, MatCardModule, MatCheckbox, MatCheckboxModule, MatFormField, MatFormFieldModule, MatGridList, MatGridListModule, MatIconModule, MatInputModule } from '@angular/material';
-
-
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
