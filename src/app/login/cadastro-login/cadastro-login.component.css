@@ -20,8 +20,10 @@
 }
 
 .mat-card{
-  margin-top: 20px;
-  padding: 40px;
+  margin-top: 10px;
+  padding-top: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .mat-form-field {
