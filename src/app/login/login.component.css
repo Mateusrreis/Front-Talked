@@ -1,5 +1,7 @@
-.mat-card{
-    padding: 45px;
+.mat-card {
+    padding: 60px;
+    position: relative;
+    top: 3%;
 }
 
 .mat-form-field{

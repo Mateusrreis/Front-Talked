@@ -5,9 +5,6 @@ import { Usuario } from "../../core/Models/Usuario";
 import { Router } from '@angular/router';
 import { Validacoes } from '../../Validacoes/Validacoes';
 import { ToastrService } from 'ngx-toastr';
-import { error } from 'protractor';
-import { delay } from 'rxjs/operators';
-
 
 @Component({
   selector: 'app-cadastro-login',

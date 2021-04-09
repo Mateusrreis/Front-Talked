@@ -7,8 +7,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuModule } from './menu/menu.module';
 import { JwtModule } from '@auth0/angular-jwt';
-import { RecuperarUsuarioComponent } from './recuperar-usuario/recuperar-usuario.component';
-import { RecuperarUsuarioEmailComponent } from './recuperar-usuario/recuperar-usuario-email/recuperar-usuario-email.component';
 
 
 
