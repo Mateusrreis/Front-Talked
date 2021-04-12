@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../core/Models/Usuario';
 import { LoginusuarioService } from './loginusuario.service';
 import { Router } from '@angular/router';
-
 import { ToastrService } from 'ngx-toastr';
 import { Menu } from '../menu/Menu';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -42,7 +40,6 @@ export class LoginComponent implements OnInit {
       error => this.toastr.error('Opa, usuario e senha incorretos')
     ),
     error => this.toastr.error('Opa, verifique seu usuario e senha');
-    
   }
 
   VerifyBoardKey($event){

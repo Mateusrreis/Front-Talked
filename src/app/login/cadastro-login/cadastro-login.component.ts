@@ -50,21 +50,21 @@ export class CadastroLoginComponent implements OnInit {
       });
   }
 
-  // enviarUsuario() {
-  //   this.usuario.Nome = this.formularioDeCadastroUsuario.value.nome;
-  //   this.usuario.Email = this.formularioDeCadastroUsuario.value.emails.email;
-  //   this.usuario.ConfirmacaoEmail = this.formularioDeCadastroUsuario.value.emails.ConfirmEmail;
-  //   this.usuario.Senha = this.formularioDeCadastroUsuario.value.passwords.senha;
-  //   this.usuario.ConfirmacaoSenha = this.formularioDeCadastroUsuario.value.passwords.ConfirmSenha;
-  //   this.servico.enviarUsuario(this.usuario).subscribe(result => {
-  //     if (result !== null) {
-  //       this.toastr.success('Usuario criado', 'Iremos te redirecionar para a tela de login');
-  //       setTimeout(() => this.rotas.navigate(['/login']), 5000);
-  //     }
-  //   },
-  //     error => this.toastr.error('Opa aconteceu algum erro', 'Verifique se as informações estão corretas')
-  //   );
-  // }
+  enviarUsuario() {
+    this.usuario.nome = this.formularioDeCadastroUsuario.value.nome;
+    this.usuario.email = this.formularioDeCadastroUsuario.value.emails.email;
+    this.usuario.confirmacaoEmail = this.formularioDeCadastroUsuario.value.emails.ConfirmEmail;
+    this.usuario.senha = this.formularioDeCadastroUsuario.value.passwords.senha;
+    this.usuario.confirmacaoSenha = this.formularioDeCadastroUsuario.value.passwords.ConfirmSenha;
+    this.servico.enviarUsuario(this.usuario).subscribe(result => {
+      if (result !== null) {
+        this.toastr.success('Usuario criado', 'Iremos te redirecionar para a tela de login');
+        setTimeout(() => this.rotas.navigate(['/login']), 5000);
+      }
+    },
+      error => this.toastr.error('Opa aconteceu algum erro', 'Verifique se as informações estão corretas')
+    );
+  }
 
   Cancelar() {
     this.rotas.navigate(['/login']);

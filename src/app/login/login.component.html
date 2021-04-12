@@ -8,13 +8,13 @@
           </mat-card-title>
           <mat-card-content>
             <mat-form-field class="example-full-width">
-              <input matInput type="text" class="form-control corInput fontText" id="Usuario" name="usuario"
-                placeholder="Digite seu Email" value="">
+              <input matInput type="text" class="form-control corInput fontText" id="usuario.email" [(ngModel)]="usuario.email" name="usuario.nome"
+                placeholder="Digite seu Email" value="usuario.email">
             </mat-form-field>
             <br>
             <mat-form-field class="example-full-width">
-              <input matInput [type]="hide ? 'password' : 'text'" class="form-control corInput fontText" id="Senha" name="senha"
-                placeholder="Digite sua senha" value="">
+              <input matInput [type]="hide ? 'password' : 'text'" class="form-control corInput fontText" id="usuario.senha" [(ngModel)]="usuario.senha" name="usuario.senha"
+                placeholder="Digite sua senha" value="usuario.email">
               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -24,7 +24,7 @@
           </mat-card-content>
           <mat-card-actions>
             <div class="button-center-login">
-              <button mat-raised-button color="primary">Entrar</button>
+              <button mat-raised-button color="primary" (click)="Logar(usuario)">Entrar</button>
             </div>
             <br>
             <br>
