@@ -20,7 +20,7 @@ color: #7d00ad;
 .buttonsMenu{
   position: relative;
   left: 104px;
-  bottom: 8px;
+  bottom: 2px;
 }
 
 .imagemLogo {
@@ -29,7 +29,7 @@ color: #7d00ad;
   background-size:contain;
   padding: 3%;
   position: relative;
-  top:8.5%;
+  top:16.5%;
   left: 5%;
   bottom: 0%;
 }
